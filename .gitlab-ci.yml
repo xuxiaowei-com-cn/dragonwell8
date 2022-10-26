@@ -4,6 +4,8 @@ stages:
 docker-build:
   stage: docker-build
   image: docker:latest
+  services:
+    - docker:dind
   script:
     # 下载阿里巴巴 JDK 8
     # https://dragonwell.oss-cn-shanghai.aliyuncs.com/8/x64/8.1.1-GA/Alibaba_Dragonwell_8.1.1-GA_Linux_x64.tar.gz
