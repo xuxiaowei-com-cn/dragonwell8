@@ -8,15 +8,14 @@ docker-build:
     - docker:dind
   script:
     # 下载阿里巴巴 JDK 8
-    # https://dragonwell.oss-cn-shanghai.aliyuncs.com/8.9.10/Alibaba_Dragonwell_8.9.10_x64_linux.tar.gz
-    - wget https://dragonwell.oss-cn-shanghai.aliyuncs.com/8.9.10/Alibaba_Dragonwell_8.9.10_x64_linux.tar.gz
-    - docker build -t dragonwell8:8.9.10 .
+    - wget https://github.com/alibaba/dragonwell8/releases/download/dragonwell-8.10.11_jdk8u322-ga/Alibaba_Dragonwell_8.10.11_x64_linux.tar.gz
+    - docker build -t dragonwell8:8.10.11 .
   after_script:
     - docker images
     - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-    - docker tag dragonwell8:8.9.10 $DOCKER_USERNAME/dragonwell8:8.9.10
+    - docker tag dragonwell8:8.10.11 $DOCKER_USERNAME/dragonwell8:8.10.11
     - docker images
-    - docker push $DOCKER_USERNAME/dragonwell8:8.9.10
+    - docker push $DOCKER_USERNAME/dragonwell8:8.10.11
   # https://docs.gitlab.com/ee/ci/yaml/index.html#rules
   rules:
     - if: $CI_COMMIT_TAG

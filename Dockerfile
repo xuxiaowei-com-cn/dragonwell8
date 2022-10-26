@@ -8,11 +8,11 @@ MAINTAINER 徐晓伟 xuxiaowei@xuxiaowei.com.cn
 WORKDIR /usr/local/dragonwell-8
 
 # 添加镜像
-ADD Alibaba_Dragonwell_8.9.10_x64_linux.tar.gz .
-RUN mv jdk8u312-b01/* .
+ADD Alibaba_Dragonwell_8.10.11_x64_linux.tar.gz .
+RUN mv dragonwell-8.10.11/* .
 
 # 设置环境变量
 ENV JAVA_HOME=/usr/local/dragonwell-8
-ENV JAVA_VERSION=8u312
-ENV DRAGONWELL_VERSION=8.9.10
+ENV JAVA_VERSION=8u322
+ENV DRAGONWELL_VERSION=8.10.11
 ENV PATH=/usr/local/dragonwell-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
