@@ -1,6 +1,9 @@
 # 选择运行时基础镜像
 FROM openanolis/anolisos:8.6
 
+# 维护人员
+MAINTAINER 徐晓伟 xuxiaowei@xuxiaowei.com.cn
+
 # 工作空间
 WORKDIR /usr/local/dragonwell-8
 
