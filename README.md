@@ -101,6 +101,8 @@
   </a>
 </div>
 
+## [GitLab 流水线](https://gitlab.com/xuxiaowei-com-cn/dragonwell8/-/pipelines)
+
 ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/xuxiaowei-com-cn/dragonwell8.svg)](https://starchart.cc/xuxiaowei-com-cn/dragonwell8)
