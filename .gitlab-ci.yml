@@ -7,15 +7,17 @@ docker-build:
   services:
     - docker:dind
   script:
+    # 下载 git
+    - wget https://github.com/git/git/archive/refs/tags/v2.38.1.tar.gz
     # 下载阿里巴巴 JDK 8
     - wget https://github.com/alibaba/dragonwell8/releases/download/dragonwell-extended-8.13.14_jdk8u352-ga/Alibaba_Dragonwell_Extended_8.13.14_x64_linux.tar.gz
-    - docker build -t dragonwell8:8.13.14-Extended .
+    - docker build -t dragonwell8:8.13.14-Extended-git .
   after_script:
     - docker images
     - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-    - docker tag dragonwell8:8.13.14-Extended $DOCKER_USERNAME/dragonwell8:8.13.14-Extended
+    - docker tag dragonwell8:8.13.14-Extended-git $DOCKER_USERNAME/dragonwell8:8.13.14-Extended-git
     - docker images
-    - docker push $DOCKER_USERNAME/dragonwell8:8.13.14-Extended
+    - docker push $DOCKER_USERNAME/dragonwell8:8.13.14-Extended-git
   # https://docs.gitlab.com/ee/ci/yaml/index.html#rules
   rules:
     - if: $CI_COMMIT_TAG
