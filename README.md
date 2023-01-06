@@ -101,6 +101,23 @@
   </a>
 </div>
 
+## 批量添加远端仓库地址
+
+<details>
+<summary>点击展开</summary>
+git remote add gitee https://gitee.com/xuxiaowei-com-cn/dragonwell8.git
+
+git remote add gitlab https://gitlab.com/xuxiaowei-com-cn/dragonwell8.git
+
+git remote add jihulab https://jihulab.com/xuxiaowei-com-cn/dragonwell8.git
+
+git remote add github https://github.com/xuxiaowei-com-cn/dragonwell8.git
+
+git remote add gitcode https://gitcode.net/xuxiaowei-com-cn/dragonwell8.git
+
+git remote add gitlink https://gitlink.org.cn/xuxiaowei-com-cn/dragonwell8.git
+</details>
+
 ## [GitLab 流水线](https://gitlab.com/xuxiaowei-com-cn/dragonwell8/-/pipelines)
 
 ## Stargazers over time
